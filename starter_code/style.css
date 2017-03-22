@@ -25,12 +25,14 @@ body {
 
 .formSection{
 	float: left;
+	width: 30%;
 	max-width: 500px;
 	margin: 0 10px 0 0;
 }
 
 .results{
 	float: left;
+	width: 40%;
 }
 
 .container, form, input, textarea, button {
@@ -55,13 +57,14 @@ form {
 }
 
 .formGroup label, input, textarea {
-	width: 100%;
 	display: inline-block;
+	width: 100%;
 }
+
 .radio input, .radio label {
 	display: inline-block;
-	font-size: 16px;
 	width: inherit;
+	font-size: 16px;
 	margin: 0 0 5px 10px;
 }
 .check input, .check label {
@@ -71,10 +74,9 @@ form {
 	margin: 0 0 5px 10px;
 }
 
-
 input, select {
-	padding: 14px;
 	font-size: 16px;
+	padding: 14px;
 	margin-top: 4px;
 	border: 1px solid #ccc;
 	box-shadow: none;
@@ -93,12 +95,12 @@ textarea {
 }
 
 #submit-btn {
+	background: rgba(39, 208, 127,.5);
 	float: right;
 	font-weight: bold;
 	font-size: 14px;
 	width: inherit;
 	padding: 14px 22px;
-	background: rgba(39, 208, 127,.5);
 }
 
 #submit-btn:hover {
@@ -111,7 +113,7 @@ textarea {
 .results {
 	max-width: 500px;
 	background: #C8DBB3;
-	padding: 15px 25px 25px 15px;
+	padding: 20px 25px 25px 20px;
 }
 
 .results h1 {
