@@ -76,14 +76,14 @@ form {
 
 input, select {
 	font-size: 16px;
-	padding: 14px;
+	padding: 13px;
 	margin-top: 4px;
 	border: 1px solid #ccc;
 	box-shadow: none;
 }
 
 select {
-	height: 48px;
+	height: 46px;
 }
 
 textarea {
