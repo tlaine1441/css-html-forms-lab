@@ -8,8 +8,20 @@
 /* 
 	Use Google Fonts to make all of the text Proza Libre.
 
+
 	Make the Title twice as large as the body text, bold, and give it some nice margin.
 */
+body {
+	font-family: 'Proza Libre', sans-serif;
+	
+}
+
+#title {
+	font-size: 30px;
+	font-weight: 600;
+	margin: 0;
+	padding: 10px 0 0 15px;
+}
 
 /*-------- Main Styles --------*/
 
@@ -20,10 +32,88 @@
 
 	Every container, form, input, and button should have rounded corners.
 */
+#main {
+	width: 100%;
+}
+
+.formSection{
+	float: left;
+	width: 50%;
+	margin: 0 10px 0 0;
+}
+
+.results{
+	float: left;
+	width: 40%;
+}
+
+.container, form, input, textarea, button {
+	border-radius: 5px;
+}
 
 /*-------- Form Styles --------*/
 
+form {
+	max-width: 500px;
+	background: #E3E6EC;
+	padding: 10px 5px 50px 5px;
+}
 
+.row {
+	margin: 10px 0;
+}
+
+.formGroup {
+	padding: 5px 15px; 
+}
+
+.formGroup label, input, textarea {
+	width: 100%;
+	display: inline-block;
+}
+.radio input, .radio label {
+	display: inline-block;
+	font-size: 15px;
+	width: inherit;
+	margin: 0 0 5px 10px;
+}
+.check input, .check label {
+	display: inline-block;
+	font-size: 15px;
+	width: inherit;
+	margin: 0 0 5px 10px;
+}
+#verb-1 {
+	width: 100%;
+}
+
+input, select {
+	padding: 14px;
+	font-size: 16px;
+	margin-top: 4px;
+	border: 1px solid #ccc;
+	box-shadow: none;
+}
+
+select {
+	height: 48px;
+}
+
+textarea {
+	height: 100px;
+}
+
+#submit-btn {
+	float: right;
+	font-weight: bold;
+	font-size: 14px;
+	width: inherit;
+	padding: 14px 22px;
+	background: rgba(39, 208, 127,.5);
+}
+#submit-btn:hover {
+	background: rgba(39, 208, 127,1);
+}
 /* 
 
 	Make sure the form itself fills the width of whatever container its in, but no larger than 500px.
@@ -56,6 +146,8 @@
 */
 
 
+
+
 /*-------- Results Styles --------*/
 
 
@@ -66,4 +158,15 @@
 	The results container should have a background color of #C8DBB3, and comfortable padding around the text.
 
 */
+
+.results {
+	max-width: 500px;
+	background: #C8DBB3;
+	padding: 15px 25px;
+}
+
+.results h1 {
+	margin: 0;
+	font-size: 30px;
+}
 

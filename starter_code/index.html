@@ -2,13 +2,14 @@
 <html>
 <head>
 	<title>CSS HTML Forms Lab</title>
+	<link href="https://fonts.googleapis.com/css?family=Proza+Libre:400,600,700" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<section id="main">
 		<section class="formSection container">
 			<form class="form" method="GET">
-					<h1>My Dev Story</h1>
+					<h1 id="title">My Dev Story</h1>
 					<div class="row formGroup">
 					    <label for="name">Name:</label>
 					    <input id="name" name="name" >
@@ -84,7 +85,7 @@
 				    	<input id="noun-2" name="noun-2">
 					</div>
 					<div class="row formGroup">
-				    	<input type="submit">
+				    	<input id="submit-btn" type="submit">
 				    </div>
 				    
 			    </div>
@@ -103,6 +104,7 @@
 			results.className = 'container results';
 			main.appendChild(results);
 		};
+
 		/*
 		
 			Make a function that will create <section> element and append it to #main.
@@ -116,21 +118,38 @@
 		$("form").on("submit", function(event){
 
 		    // Stop the form from submitting
+		   event.preventDefault();
+
+		   makeResults();
 
 	    	// Append the new <section> created above.
+	    	// Varriables 
+	    	var $name = $("#name").val();
+	    	var $verb1 = $("#verb-1").val(); 
+	    	var $mission = $("#mission").val();
+	    	var $sentiment1 = $(".radioButtons input[type='radio']:checked").val();
+	    	var $noun1 = $("#noun-1").val();
+	    	var $noun2 = $("#noun-2").val();
+	    	var $sentiment2 = $(".checkboxes input[type='checkbox']:checked").map(function() {
+	    		return this.value }).get().join(", ");
+
+	    	// Output
+	    	var $output = "Once upon a time there was a Developer named " + $name + ".";
+	    	$output += ("</br>" + $name + " came to General Asssembly to " + $verb1 + " the great mountain of programming knowledge.");
+	    	$output += ("</br>" + $mission + " " + $name + " shouted");
+	    	$output += ("</br>" + "Though " + $sentiment1 + ", " + $name + 
+	    					" was able to overcome all obstacles with the power of their " + $noun1 + ".");
+	    	$output += ("</br>" + "In the end, their success can be contributed entirely to their " + $sentiment2 + " " + $noun2 + ".");
+
+	    	$(".results").append($output);
+	  
 
 	    	/*
 			
 				For each value entered into a form input, add the input to the corresponding sentence, then append the text into the results section:
 
-				"Once upon a time there was a Developer named NAME."
-
-				"NAME came to General Asssembly to VERB1 the great mountain of programming knowledge."
-
-				""MISSION", NAME shouted."
 	
-				"Though SENTIMENT, NAME was able to overcome all obstacles with the power of their NOUN."
-
+			
 				"In the end, their success can be contributed entirely to their " + ADJECTIVE2[list each one checked, comma-separated] + NOUN2."
 
 	    	*/ 
