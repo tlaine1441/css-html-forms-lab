@@ -60,13 +60,13 @@ form {
 }
 .radio input, .radio label {
 	display: inline-block;
-	font-size: 15px;
+	font-size: 16px;
 	width: inherit;
 	margin: 0 0 5px 10px;
 }
 .check input, .check label {
 	display: inline-block;
-	font-size: 15px;
+	font-size: 16px;
 	width: inherit;
 	margin: 0 0 5px 10px;
 }
@@ -115,7 +115,7 @@ textarea {
 }
 
 .results h1 {
-	margin: 0;
+	margin: 0 0 10px 0;
 	font-size: 30px;
 }
 
